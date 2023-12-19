@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 //router
-import questionsRouter from "./src/routes/questions";
-import userRouter from "./src/routes/user";
-import answersRoutes from "./src/routes/answers";
+import questionsRouter from "./src/routes/questions.js";
+import userRouter from "./src/routes/user.js";
+import answersRoutes from "./src/routes/answers.js";
 
 import "dotenv/config";
 

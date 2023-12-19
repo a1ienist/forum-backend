@@ -1,4 +1,4 @@
-import Answer from '../models/Answer';
+import Answer from '../models/Answer.js';
 
 const GET_ANSWERS = async (req, res) => {
   const answers = await Answer.find({ question_id: req.params.id });
@@ -16,4 +16,4 @@ const DELETE_ANSWER = async (req, res) => {
   res.json({ message: 'Answer deleted' });
 };
 
-export {GET_ANSWERS, POST_ANSWER, DELETE_ANSWER};
+export {GET_ANSWERS, POST_ANSWER, DELETE_ANSWER,};

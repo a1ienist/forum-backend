@@ -1,4 +1,4 @@
-import Question from '../models/Question';
+import Question from '../models/Question.js';
 
  const GET_QUESTION = async (req, res) => {
   const questions = await Question.find();
@@ -16,4 +16,4 @@ import Question from '../models/Question';
   res.json({ message: 'Question deleted' });
 };
 
-export {GET_QUESTION, POST_QUESTION, DELETE_QUESTION};
+export {GET_QUESTION, POST_QUESTION, DELETE_QUESTION,};

@@ -1,10 +1,11 @@
-import UserModel from '../models/User';
+import UserModel from '../models/User.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 
 const REGISTER = async (req, res) => {
     try {
         const salt = await bcrypt.genSalt(10);
+        const hash = await bcrypt.hashSync(req.body.password, salt);
 
         const user = new UserModel({
             name: req.body.name, 
@@ -55,4 +56,4 @@ const LOGIN = async (req, res) => {
     }
 };
 
-export { REGISTER, LOGIN };
+export { REGISTER, LOGIN ,};
